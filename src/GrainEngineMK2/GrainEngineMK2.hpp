@@ -144,13 +144,13 @@ struct GrainEngineMK2 : VoxglitchSamplerModule
 
   ~GrainEngineMK2()
   {
-    /*
+    delete producer_message;
+    delete consumer_message;
     for(unsigned int i=0; i<NUMBER_OF_SAMPLES; i++)
     {
-      // delete samples[i];
-      // samples[i] = NULL;
+      delete samples[i];
+      samples[i] = NULL;
     }
-    */
   }
 
   json_t *dataToJson() override
